@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int grenaistotais = 0, vinter = 0, vgremio = 0, empates = 0, x = 0;
+        
+        while (x != 2){
+            int a = t.nextInt();
+            int b = t.nextInt();
+            
+            grenaistotais++;
+            
+            if (a > b){
+                vinter++;
+            } else if (b > a){
+                vgremio++;
+            } else if (b == a){
+                empates++;
+            }
+            System.out.println("Novo grenal (1-sim 2-nao)");
+            x = t.nextInt();
+        }
+        System.out.println(grenaistotais + " grenais");
+        System.out.println("Inter:" + vinter);
+        System.out.println("Gremio:" + vgremio);
+        System.out.println("Empates:" + empates);
+        if (vinter > vgremio){
+            System.out.println("Inter venceu mais");
+        } else if (vgremio > vinter){
+            System.out.println("Gremio venceu mais");
+        } else {
+            System.out.println("Nao houve vencedor");
+        }
+    }    
+}

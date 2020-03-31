@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int x,y;
+        
+        x = t.nextInt();
+        y = t.nextInt();
+        
+        if (y < x){
+            int aux = x;
+            x = y;
+            y = aux;
+        } 
+        for (int i = x+1; i < y; i++) {
+            if (i % 5 == 2 || i % 5 == 3){
+                System.out.println(i);
+            }
+        }
+    }    
+}

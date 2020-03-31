@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        float n1, n2, media;
+        
+        n1 = t.nextFloat();
+        while (n1 < 0 || n1 > 10){
+            System.out.println("nota invalida");
+            n1 = t.nextFloat();
+        }
+        n2 = t.nextFloat();
+        while (n2 < 0 || n2 > 10){
+            System.out.println("nota invalida");
+            n2 = t.nextFloat();
+        }
+        media = (n1+n2) / 2;
+        System.out.println("media = " + media);
+    }    
+}

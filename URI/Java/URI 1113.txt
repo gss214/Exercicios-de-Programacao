@@ -1,0 +1,23 @@
+//URI Online Judge | 1113
+//Crescente e Decrescente
+
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        int x,y;
+        Scanner t = new Scanner(System.in);
+        x = t.nextInt();
+        y = t.nextInt();
+        
+        while (x != y){
+            if (x>y){
+                System.out.println("Decrescente");
+            } else if (y>x){
+                System.out.println("Crescente");
+            }
+            x = t.nextInt();
+            y = t.nextInt();
+        }            
+    }    
+}

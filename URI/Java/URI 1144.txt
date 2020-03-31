@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int n = t.nextInt();
+        
+        for (int i = 1; i <= n; i++) {
+            System.out.println(i + " " + i*i + " " + i*i*i);
+            for (int j = 0; j < 1; j++) {
+                System.out.println(i + " " + ((i*i)+1) + " " + ((i*i*i)+1));
+            }
+        }
+    }
+}

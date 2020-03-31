@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int n;
+        
+        n = t.nextInt();
+        
+        for (int i = 0; i < n; i++) {
+            int x,y;
+            x = t.nextInt();
+            y = t.nextInt();
+            if (y == 0){
+                System.out.println("divisao impossivel");
+            } else {
+                float z = (float) x/y;
+                System.out.println(z);
+            }
+        }        
+    }    
+}
