@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int n = t.nextInt();
+        int s, un = 0, a = 0;
+        
+        for (int i = 0; i < n; i++) {
+            switch (i) {
+                case 0:
+                    System.out.print("0 ");
+                    break;
+                case 1:
+                case 2:
+                    System.out.print("1 ");
+                    un = 1;
+                    a = 1;
+                    break;
+                default:
+                    s = un + a;
+                    if (i == n-1){
+                        System.out.printf("%d\n", s);
+                    } else if (i != n) {
+                        System.out.print(s + " ");
+                    }
+                    a = un;
+                    un = s;
+                    break;
+            }
+        }
+    }
+}

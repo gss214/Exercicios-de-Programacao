@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class ExerciciosURI { 
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int n = t.nextInt();
+        int j = 0;
+        String f = "";
+        t.nextLine();
+        
+        String x = t.nextLine();
+        x += "/";
+
+        for (int i = 0; i < n; i++) {
+            String aux =  "";
+            while (x.charAt(j) != ' ' && x.charAt(j) != '/'){
+                aux += x.charAt(j);
+                j++;
+            }
+            j++;
+            
+           if (aux.length() > 3){
+                f += aux;
+                if (i != n-1){
+                    f += " ";
+                }
+            } else {
+                if (aux.length() == 1){
+                    f += aux;
+                    if (i != n-1){
+                        f += " ";
+                    }
+                }
+                else if (aux.charAt(0) == 'O' && aux.charAt(1) == 'B' && aux.length() > 2){
+                    if (i != n-1){
+                        f += "OBI ";
+                    } else {
+                        f += "OBI";
+                    }
+                } else if (aux.charAt(0) == 'U' && aux.charAt(1) == 'R' && aux.length() > 2){
+                    if (i != n-1){
+                        f += "URI ";
+                    } else {
+                        f += "URI";
+                    }
+                } else {
+                    f += aux;
+                    if (i != n-1){
+                        f += " ";
+                    }
+                }
+            }
+        }
+        System.out.println(f);
+    }
+}

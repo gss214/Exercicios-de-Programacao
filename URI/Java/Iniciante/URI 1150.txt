@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int x,z, cont = 0, soma = 0;
+        
+        x = t.nextInt();
+        z = t.nextInt();
+        
+        while (z <= x){
+            z = t.nextInt();
+        }
+               
+        while (soma < z){
+            soma += x;
+            x++;
+            cont++;
+        }
+        System.out.println(cont);
+    }
+}

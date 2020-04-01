@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int vetpar[] = new int[5];
+        int vp = 0;
+        int vetimpar[] = new int[5];
+        int vi = 0;
+        
+        for (int i = 0; i < 15; i++) {
+            int x = t.nextInt();
+            if (x % 2 == 0){
+                vetpar[vp] = x;
+                vp++;
+                if (vp == 5){
+                    for (int j = 0; j < 5; j++) {
+                        System.out.printf("par[%d] = %d\n", j, vetpar[j]);
+                    }
+                    vp = 0;
+                } 
+            } else {
+                vetimpar[vi] = x;
+                vi++;
+                if (vi == 5){
+                    for (int j = 0; j < 5; j++) {
+                        System.out.printf("impar[%d] = %d\n", j, vetimpar[j]);   
+                    }
+                    vi = 0;
+                }
+            }
+        }
+        for (int i = 0; i < vi; i++) {
+            System.out.printf("impar[%d] = %d\n", i, vetimpar[i]);
+        }
+        for (int i = 0; i < vp; i++) {
+            System.out.printf("par[%d] = %d\n", i, vetpar[i]);
+        }
+    }
+}

@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class ExerciciosURI { 
+    public static void main(String[] args) {
+       
+        Scanner t = new Scanner (System.in);
+        
+        double mat[][] = new double[12][12];
+        double soma = 0;
+        int ign = 0;
+        String d = t.nextLine();
+        for (int i = 0; i < 12; i++) {
+            for (int j = 0; j < 12; j++) {
+                mat[i][j] = t.nextDouble();
+            }
+        }
+        for (int i = 0; i < 12; i++) {
+            for (int j = 0; j < 12; j++) {
+                if (j < ign){
+                    soma += mat[i][j];
+                }
+            }
+            if (i <= 4){
+                ign++;
+            } else if (i >= 6 ){
+                ign--;
+            } else if (i == 5 || i == 6) {
+                ign = 5;
+            }
+            
+        }
+        if (d.equals("S")){
+            System.out.printf("%.1f\n", soma);
+        } else {
+            double media = (double) soma / 30;
+            System.out.printf("%.1f\n", media);
+        }
+    }
+}

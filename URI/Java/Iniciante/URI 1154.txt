@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+       int id = t.nextInt();
+       int s = 0, c = 0;
+       float m;
+       while (id >= 0){
+           s += id;
+           c++;
+           id = t.nextInt();
+       }
+       m = (float) s / c;
+       System.out.printf("%.2f\n", m);
+    }
+}

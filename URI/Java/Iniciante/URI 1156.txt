@@ -1,0 +1,17 @@
+public class ExerciciosURI {
+    public static void main(String[] args) {
+       float s = 0;
+       int d = 2;
+        for (int i = 1; i <= 39; i+=2) {
+            switch (i){
+                case 1:
+                    s++;
+                    break;
+                default:
+                    s += (float) i/d;
+                    d *= 2;
+            }
+        }
+        System.out.printf("%.2f\n", s);
+    }
+}

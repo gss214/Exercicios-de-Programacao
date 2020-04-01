@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int n = t.nextInt();
+        int s;
+        
+        for (int i = 0; i < n; i++) {
+            s = 0;
+            int x = t.nextInt();
+            int y = t.nextInt();
+            int impares = 0;
+            int j = x;
+            while (impares != y) {
+                if (j % 2 != 0){
+                    s += j;
+                    impares++;
+                }
+                j++;
+            }
+            System.out.println(s);
+        }
+    }
+}

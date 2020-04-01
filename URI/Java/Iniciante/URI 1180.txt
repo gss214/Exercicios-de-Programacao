@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class ExerciciosURI { 
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int n = t.nextInt();
+        int vetx[] = new int[n];
+        
+        for (int i = 0; i < n; i++) {
+            vetx[i] = t.nextInt();
+        }
+        int min = vetx[0], pos = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (i != n-1){
+                if (min > vetx[i+1]) {
+                    min = vetx[i+1];
+                    pos = i+1;
+                } 
+            }
+        }
+        System.out.println("Menor valor: " + min);
+        System.out.println("Posicao: " + pos);
+    }
+}

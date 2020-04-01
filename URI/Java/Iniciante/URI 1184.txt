@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class ExerciciosURI { 
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        float mat[][] = new float[12][12];
+        float soma = 0;
+        int cont = 0;
+        String d = t.nextLine();
+        for (int i = 0; i < 12; i++) {
+            for (int j = 0; j < 12; j++) {
+                mat[i][j] = t.nextFloat();
+            }
+        }
+        for (int i = 0; i < 12; i++) {
+            for (int j = 0; j < 12; j++) {
+                if (j < i){
+                    soma += mat[i][j];
+                    cont++;
+                }
+            }
+        }
+        if (d.equals("S")){
+            System.out.printf("%.1f\n", soma);
+        } else {
+            float media = (float) soma / cont;
+            System.out.printf("%.1f\n", media);
+        }
+    }
+}

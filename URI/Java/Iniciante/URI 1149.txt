@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class ExerciciosURI {
+    public static void main(String[] args) {
+        Scanner t = new Scanner (System.in);
+        
+        int a,n, soma = 0;
+        a = t.nextInt();
+        n = t.nextInt();
+        
+        while (n <= 0){
+            n = t.nextInt();
+        }
+        
+        for (int i = 0; i < n; i++) {
+            soma += a + i;
+        }
+        System.out.println(soma);
+    }
+}
