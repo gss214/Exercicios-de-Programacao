@@ -1,0 +1,5 @@
+n = int(input())
+arr = map(int, input().split())
+arr = sorted(arr)
+arr2 = list(filter(lambda a: a != arr[len(arr)-1], arr))
+print(arr2[-1])
